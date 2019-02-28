@@ -82,8 +82,8 @@ defmodule AdventOfCode2018.Day2 do
   def doubles_and_triples(character_map) do
     character_map
     |> Enum.reduce({0, 0}, fn
-      {_key, 2}, {doubles, triples} -> {1, triples}
-      {_key, 3}, {doubles, triples} -> {doubles, 1}
+      {_key, 2}, {_doubles, triples} -> {1, triples}
+      {_key, 3}, {doubles, _triples} -> {doubles, 1}
       _, acc -> acc
     end)
   end
